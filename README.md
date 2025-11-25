@@ -1,5 +1,5 @@
 # I_MMSeg
-This repo holds code for [Incorporating Modality-Specific Intensity Prior as Text Prompt for Multimodal Myocardial Pathology Segmentation]
+This repo holds code for [Incorporating Modality-Specific Intensity Prior as Text Prompt for Multimodal Myocardial Pathology Segmentation].
 
 ## 📘 Abstract Figure
 ![Abstract Figure](./abstract.png)
