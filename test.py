@@ -78,9 +78,9 @@ if __name__ == "__main__":
     dataset_config = {
         'Myops': {
             'Dataset': Myops_dataset,
-            'volume_path': f'{PROJECT_ROOT}/MyoPS380_dataset/Process_data/bSSFP/test_vol_h5',
-            'volume_path1': f'{PROJECT_ROOT}/MyoPS380_dataset/Process_data/LGE/test_vol_h5',
-            'volume_path2': f'{PROJECT_ROOT}/MyoPS380_dataset/Process_data/T2w/test_vol_h5',
+            'volume_path': f'{PROJECT_ROOT}/MyoPS380_dataset/Processed_data/bSSFP/test_vol_h5',
+            'volume_path1': f'{PROJECT_ROOT}/MyoPS380_dataset/Processed_data/LGE/test_vol_h5',
+            'volume_path2': f'{PROJECT_ROOT}/MyoPS380_dataset/Processed_data/T2w/test_vol_h5',
             'list_dir': f'{PROJECT_ROOT}/list',
             'num_classes': 4,
             'z_spacing': 1,

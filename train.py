@@ -108,9 +108,9 @@ if __name__ == "__main__":
     dataset_name = args.dataset
     dataset_config = {
         'Myops': {
-            'root_path': f'{PROJECT_ROOT}/MyoPS380_dataset/Process_data/bSSFP/train_npz',
-            'root_path1': f'{PROJECT_ROOT}/MyoPS380_dataset/Process_data/LGE/train_npz',
-            'root_path2': f'{PROJECT_ROOT}/MyoPS380_dataset/Process_data/T2w/train_npz',
+            'root_path': f'{PROJECT_ROOT}/MyoPS380_dataset/Processed_data/bSSFP/train_npz',
+            'root_path1': f'{PROJECT_ROOT}/MyoPS380_dataset/Processed_data/LGE/train_npz',
+            'root_path2': f'{PROJECT_ROOT}/MyoPS380_dataset/Processed_data/T2w/train_npz',
             'list_dir': f'{PROJECT_ROOT}/list',
             'num_classes': 4,
         },
@@ -122,7 +122,7 @@ if __name__ == "__main__":
     args.list_dir = dataset_config[dataset_name]['list_dir']
     args.is_pretrain = True
     args.exp = 'TU_' + dataset_name + str(args.img_size)
-    snapshot_path = "{}/weights/{}/{}".format(PROJECT_ROOT, args.exp, 'TU')
+    snapshot_path = "{}/weight/{}/{}".format(PROJECT_ROOT, args.exp, 'TU')
     snapshot_path = snapshot_path + '_pretrain' if args.is_pretrain else snapshot_path
     snapshot_path += '_' + args.vit_name
     snapshot_path = snapshot_path + '_skip' + str(args.n_skip)
