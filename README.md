@@ -136,14 +136,7 @@ To support research in this direction, the **MyoPS380 dataset** provides multi-m
 
 2. Data Source and Quality Control
 
-Before inclusion in the MyoPS380 dataset, all candidate cases underwent systematic image quality screening to ensure data reliability. The quality control process excluded:
-
-- cases with severe motion artifacts,
-- cardiac/respiratory mis-triggering leading to structural distortion,
-- missing key modalities (e.g., incomplete LGE acquisition),
-- insufficient ventricular coverage.
-
-After screening, **380 multi-modality CMR studies** acquired at **Renji Hospital, Shanghai Jiao Tong University School of Medicine (2017–2023)** were retained. All cases include bSSFP, LGE, and T2W modalities, forming a comprehensive and high-quality foundation for myocardial pathology analysis.
+Prior to inclusion in the MyoPS380 dataset, all candidate cases underwent systematic image quality screening to ensure data reliability and usability. The screening process involved: excluding cases with significant motion artefacts, cardiac motion artefacts, or structural distortion due to respiratory inconsistency; and excluding cases with missing key modalities (e.g., incomplete LGE acquisition) or inadequate ventricular coverage. After screening, **380 multi-modality CMR studies** acquired at **Renji Hospital, Shanghai Jiao Tong University School of Medicine (2017–2023)** were retained. These encompassed three modalities—bSSFP, LGE, and T2W—providing a comprehensive and high-quality imaging foundation for cardiomyopathy analysis.
 
 ---
 
