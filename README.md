@@ -120,13 +120,13 @@ python test.py --dataset Myops --vit_name R50-ViT-B_16
 
 ### 5. Dataset Description --- MyoPS380 dataset
 
-1. Background
+**1. Background**
 
 Assessing myocardial viability is critical for the diagnosis and management of patients with myocardial infarction (MI). Cardiac magnetic resonance (CMR) plays a central role in this process, offering detailed structural, functional, and tissue-characterization information. Three commonly used CMR modalities provide complementary perspectives:
 
 - **bSSFP (balanced Steady-State Free Precession)** — captures cardiac motion and provides clear anatomical boundaries.  
 - **LGE (Late Gadolinium Enhancement)** — visualizes myocardial infarction and fibrotic tissue.  
-- **T2-weighted (T2W)** — highlights acute injury and myocardial edema.
+- **T2-weighted (T2w)** — highlights acute injury and myocardial edema.
 
 Together, these modalities enable comprehensive evaluation of myocardial tissue, facilitating differentiation between normal myocardium, scar (infarction), and edema. However, manual annotation is labor-intensive, time-consuming, and subject to inter-/intra-observer variability, motivating the need for automated multi-modality myocardial pathology segmentation.
 
@@ -134,13 +134,13 @@ To support research in this direction, the **MyoPS380 dataset** provides multi-m
 
 ---
 
-2. Data Source and Quality Control
+**2. Data Source and Quality Control**
 
 Prior to inclusion in the MyoPS380 dataset, all candidate cases underwent systematic image quality screening to ensure data reliability and usability. The screening process involved: excluding cases with significant motion artefacts, cardiac motion artefacts, or structural distortion due to respiratory inconsistency; and excluding cases with missing key modalities (e.g., incomplete LGE acquisition) or inadequate ventricular coverage. After screening, **380 multi-modality CMR studies** acquired at **Renji Hospital, Shanghai Jiao Tong University School of Medicine (2017–2023)** were retained. These encompassed three modalities—bSSFP, LGE, and T2W—providing a comprehensive and high-quality imaging foundation for cardiomyopathy analysis.
 
 ---
 
-3. Dataset Structure
+**3. Dataset Structure**
 
 The dataset follows a unified naming and directory convention to facilitate model training, reproducibility, and further extension. Each patient's multi-modality images are stored separately by modality, with labels matched by patient ID.
 
@@ -172,11 +172,11 @@ Annotations were performed by **three experienced radiologists** on modality-spe
 
 ---
 
-4. Preprocessing Pipeline
+**4. Preprocessing Pipeline**
 
 To address inherent differences across multi-modality CMR (bSSFP, LGE, T2W)—including slice count, imaging geometry, and voxel resolution—we designed a structured preprocessing pipeline to ensure spatial consistency and improve model training stability.
 
-### **(1) Slice-Level Correspondence Construction**
+***(1) Slice-Level Correspondence Construction***
 
 Slice numbers differ across modalities, hindering accurate fusion. For each case:
 
@@ -189,7 +189,7 @@ This process ensures consistent slice counts and better multi-modal compatibilit
 
 ---
 
-### **(2) Spatial Normalization: Resampling and Center Cropping**
+***(2) Spatial Normalization: Resampling and Center Cropping***
 
 To mitigate scale inconsistencies:
 
@@ -199,7 +199,7 @@ To mitigate scale inconsistencies:
 
 ---
 
-### **(3) Slice-wise 2D Affine Registration Guided by Myocardial Masks**
+***(3) Slice-wise 2D Affine Registration Guided by Myocardial Masks***
 
 Due to inter-modality differences influenced by respiration, cardiac motion, and acquisition parameters, significant spatial misalignment exists.
 
@@ -209,7 +209,7 @@ Due to inter-modality differences influenced by respiration, cardiac motion, and
 
 ---
 
-### **(4) Voxelmorph-Based Non-Rigid Deep Registration**
+***(4) Voxelmorph-Based Non-Rigid Deep Registration***
 
 Affine alignment captures only linear transformations. To correct non-linear deformations across modalities:
 
@@ -221,7 +221,7 @@ This step substantially enhances geometric consistency in the myocardial region.
 
 ---
 
-### **(5) Final ROI Cropping and Data Packaging**
+***(5) Final ROI Cropping and Data Packaging***
 
 - Myocardial masks were used to perform ROI cropping, reducing background redundancy.
 - Final images were standardized to **128×128**.
@@ -231,7 +231,7 @@ This pipeline yields spatially coherent, scale-normalized, and structurally stan
 
 ---
 
-5. Representative Examples
+**5. Representative Examples**
 
 The dataset covers a broad spectrum of myocardial pathology, ranging from mild infarction to extensive transmural MI accompanied by widespread edema.
 
@@ -244,7 +244,7 @@ The visual diversity underscores the necessity of multi-modality fusion and supp
 
 ---
 
-6. Ethical Approval
+**6. Ethical Approval**
 
 The MyoPS380 dataset was approved by the Ethics Committee of Renji Hospital, Shanghai Jiao Tong University School of Medicine  
 **(Approval No. [2018]093)**  
@@ -252,7 +252,7 @@ and fully anonymized before data release to ensure patient privacy and complianc
 
 ---
 
-7. Data Usage Guidelines
+**7. Data Usage Guidelines**
 
 The **MyoPS380 dataset** is currently undergoing peer review as part of an accompanying publication.  
 Pending successful completion of the final compliance check, it is expected to be publicly released **before January 2026**.
