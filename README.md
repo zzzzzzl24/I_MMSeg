@@ -47,7 +47,7 @@ Move the I_MMSeg_MyoPS380 model weight files into:
 ./weights/TU_Myops128/TU_pretrain_R50-ViT-B_16_skip3_epo300_bs24_lr0.001_128/
 ```
 
-For the MyoPS380_dataset folder, please proceed to [Section 4. Dataset Description](#4-dataset-description--myops380-dataset) to obtain the download link:
+For the MyoPS380_dataset folder, please proceed to [Section 4. Dataset Description](#4-dataset-description---myops380-dataset) to obtain the download link:
 
 The Raw_data/ directory contains the original data organized into bSSFP, LGE, T2w, and label.
 
