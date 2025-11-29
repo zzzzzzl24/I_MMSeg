@@ -12,10 +12,11 @@ It is provided solely for peer-review and reproducibility checking, and is not t
 
 ## Usage
 
-### 1. Download Pre-trained Models and Dataset
+### 1. Download Environment Package, Pre-trained Weights, and Dataset
 
 Please download the following resources:
 
+- **I_MMSeg environment configuration**
 - **ViT pre-trained weights**
 - **I_MMSeg model weights**
 - **MyoPS380 dataset (Raw data + Processed data)**
@@ -24,6 +25,17 @@ Please download the following resources:
 
 The Download link contains three components: ViT_checkpoint, I_MMSeg_checkpoint, and MyoPS380_dataset(Issued upon approval).
 Please organize them as follows:
+
+Environment:This project is implemented with **Python 3.8**, **CUDA 11.8**, and **PyTorch 2.2**.  
+Please download the environment files and extract the environment package:
+
+```bash
+mkdir -p ./miniconda3/envs/I_MMSeg
+tar -xzf I_MMSeg_env.tar.gz -C ./miniconda3/envs/I_MMSeg
+cd ./miniconda3/envs/I_MMSeg
+./bin/conda-unpack
+source ./miniconda3/envs/I_MMSeg/bin/activate
+```
 
 Move the ViT pre-trained weight files inside ViT_checkpoint to:
 ```bash
@@ -94,17 +106,7 @@ I_MMSeg/
 └── README.md
 ```
 
-### 3. Environment
-
-This project is implemented with **Python 3.8**, **CUDA 11.8**, and **PyTorch 2.2**.  
-Please prepare a conda environment and install all dependencies via:
-
-```bash
-conda env create -f environment.yaml
-conda activate I_MMSeg
-```
-
-### 4. Train/Test
+### 3. Train/Test
 
 - Run the train script on MyoPS380 dataset. The batch size can be reduced to 12 or 6 to save memory (please also decrease the base_lr linearly), and both can reach similar performance.
 
@@ -118,7 +120,7 @@ CUDA_VISIBLE_DEVICES= "0,1" python train.py --dataset Myops --vit_name R50-ViT-B
 python test.py --dataset Myops --vit_name R50-ViT-B_16
 ```
 
-### 5. Dataset Description --- MyoPS380 dataset
+### 4. Dataset Description --- MyoPS380 dataset
 
 **1. Background**
 
@@ -174,7 +176,9 @@ Annotations were performed by **three experienced radiologists** on modality-spe
 
 **4. Preprocessing Pipeline**
 
-To address inherent differences across multi-modality CMR (bSSFP, LGE, T2W)—including slice count, imaging geometry, and voxel resolution—we designed a structured preprocessing pipeline to ensure spatial consistency and improve model training stability.
+To address inherent differences across multi-modality CMR (bSSFP, LGE, T2W)—including slice count, imaging geometry, and voxel resolution—we designed a structured preprocessing pipeline to ensure spatial consistency and improve model training stability. The detailed processing flowchart and particulars are as follows:
+
+![processing flowchart](./processing.png)
 
 ***(1) Slice-Level Correspondence Construction***
 
@@ -244,15 +248,14 @@ The visual diversity underscores the necessity of multi-modality fusion and supp
 
 ---
 
-**6. Ethical Approval**
+**5. Ethical Approval**
 
-The MyoPS380 dataset was approved by the Ethics Committee of Renji Hospital, Shanghai Jiao Tong University School of Medicine  
-**(Approval No. [2018]093)**  
+The MyoPS380 dataset was approved by the Ethics Committee of Renji Hospital, Shanghai Jiao Tong University School of Medicine **(Approval No. [2018]093)**  
 and fully anonymized before data release to ensure patient privacy and compliance with ethical standards.
 
 ---
 
-**7. Data Usage Guidelines**
+**6. Data Usage Guidelines**
 
 The **MyoPS380 dataset** is currently undergoing peer review as part of an accompanying publication.  
 Pending successful completion of the final compliance check, it is expected to be publicly released **before January 2026**.
@@ -269,6 +272,7 @@ After verifying your information, we will send you the dataset download link. We
 * [Google ViT](https://github.com/google-research/vision_transformer)
 * [ViT-pytorch](https://github.com/jeonsworld/ViT-pytorch)
 * [TransUNet](https://github.com/Beckschen/TransUNet/tree/main)
+* [Voxelmorph](https://github.com/voxelmorph/voxelmorph/tree/dev?tab=readme-ov-file)
 
 <!-- ## Citations
 
