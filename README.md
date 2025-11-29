@@ -23,10 +23,10 @@ Please download the following resources:
 
 👉 Download link: [Google Drive](https://drive.google.com/drive/folders/1s8MCmZDA5kslwicDBFamX3hXiY72EkzX?usp=drive_link)
 
-The Download link contains three components: ViT_checkpoint, I_MMSeg_checkpoint, and MyoPS380_dataset(Issued upon approval).
+The Download link contains fout components:I_MMSeg environment configuration, ViT_checkpoint, I_MMSeg_checkpoint, and MyoPS380_dataset(Issued upon approval).
 Please organize them as follows:
 
-Environment:This project is implemented with **Python 3.8**, **CUDA 11.8**, and **PyTorch 2.2**.  
+**Environment**:This project is implemented with **Python 3.8**, **CUDA 11.8**, and **PyTorch 2.2**.  
 Please download the environment files and extract the environment package:
 
 ```bash
@@ -39,15 +39,15 @@ source ./miniconda3/envs/I_MMSeg/bin/activate
 
 Move the ViT pre-trained weight files inside ViT_checkpoint to:
 ```bash
-../model/vit_checkpoint/imagenet21k/
+./model/vit_checkpoint/imagenet21k/
 ```
 
 Move the I_MMSeg_MyoPS380 model weight files into:
 ```bash
-../weights/TU_Myops128/TU_pretrain_R50-ViT-B_16_skip3_epo300_bs24_lr0.001_128/
+./weights/TU_Myops128/TU_pretrain_R50-ViT-B_16_skip3_epo300_bs24_lr0.001_128/
 ```
 
-For the MyoPS380_dataset folder, please proceed to Section 5. Dataset Description to obtain the download link:
+For the MyoPS380_dataset folder, please proceed to [Section 4. Dataset Description](#4-dataset-description--myops380-dataset) to obtain the download link:
 
 The Raw_data/ directory contains the original data organized into bSSFP, LGE, T2w, and label.
 
@@ -120,7 +120,7 @@ CUDA_VISIBLE_DEVICES= "0,1" python train.py --dataset Myops --vit_name R50-ViT-B
 python test.py --dataset Myops --vit_name R50-ViT-B_16
 ```
 
-### 4. Dataset Description --- MyoPS380 dataset
+### 4. Dataset Description - MyoPS380 dataset
 
 **1. Background**
 
