@@ -17,7 +17,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--src_path', type=str,
                    default= f'{PROJECT_ROOT}/MyoPS380_dataset/Raw_data', help='path for raw data')
 parser.add_argument('--dst_path', type=str,
-                   default= f'{PROJECT_ROOT}/MyoPS380_dataset/Process_data', help='root dir for data')
+                   default= f'{PROJECT_ROOT}/MyoPS380_dataset/Processed_data', help='root dir for data')
 parser.add_argument('--use_normalize', action='store_true', default=True,
                    help='use normalize')
 args = parser.parse_args()
