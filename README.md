@@ -23,7 +23,7 @@ Please download the following resources:
 
 👉 Download link: [Google Drive](https://drive.google.com/drive/folders/1s8MCmZDA5kslwicDBFamX3hXiY72EkzX?usp=drive_link)
 
-The Download link contains fout components:I_MMSeg environment configuration, ViT_checkpoint, I_MMSeg_checkpoint, and MyoPS380_dataset(Issued upon approval).
+The Download link contains four components:I_MMSeg environment configuration, ViT_checkpoint, I_MMSeg_checkpoint, and MyoPS380_dataset(Issued upon approval).
 Please organize them as follows:
 
 **Environment**:This project is implemented with **Python 3.8**, **CUDA 11.8**, and **PyTorch 2.2**.  
