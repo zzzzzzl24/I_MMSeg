@@ -1,5 +1,7 @@
 <h1 align="center">I-MMSeg: Intensity-guided Multimodal Image Segmentation</h1>
 
+![abstract](./docs/abstract.png)
+
 ## 📰 News
 - [12/01/2025] The code for reproducing our multimodal myocardial pathology segmentation results on the MyoPS++ and MyoPS380 datasets is now available. This release is intended for peer review and reproducibility verification. 
 
