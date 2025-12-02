@@ -47,7 +47,6 @@ def trainer_Myops(args, model, snapshot_path):
     max_epoch = args.max_epochs
     max_iterations = args.max_epochs * len(trainloader) 
     logging.info("{} iterations per epoch. {} max iterations ".format(len(trainloader), max_iterations))
-    best_performance = 0.0
     iterator = tqdm(range(max_epoch), ncols=70)
     for epoch_num in iterator:
         do_contrast = epoch_num > args.start_contrast_epoch

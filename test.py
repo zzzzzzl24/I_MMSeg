@@ -62,7 +62,6 @@ def inference(args, model, test_save_path=None):
         logging.info('Mean class %d mean_dice %f mean_hd95 %f' % (i, metric_list[i-1][0], metric_list[i-1][1]))
     return "Testing Finished!"
 
-
 if __name__ == "__main__":
     if not args.deterministic:
         cudnn.benchmark = True
