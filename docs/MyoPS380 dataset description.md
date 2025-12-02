@@ -134,4 +134,4 @@ Please ensure that a permanent or long-term responsible person (e.g., professor)
 After signing, send the scanned electronic version to:**donggenf@whu.edu.cn**, **Subject:** *MyoPS380 Dataset Release Agreement*.
 Please send the email from an **institutional email address** (e.g., xxx@xxx.edu.xx). Requests sent from free email providers (Outlook, QQ, Hotmail, etc.) will be politely declined.
 
-After verifying your information, we will send you the dataset download link. We usually reply within a week. If you do not receive a response—possibly due to delivery issues—please modify the email content or title and try resending.
+After verifying your information, we will send you the dataset download link. We usually reply within a week. If you do not receive a response—possibly due to delivery issues—please modify the email content or title and try resending. 
