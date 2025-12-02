@@ -54,8 +54,8 @@ args = parser.parse_args()
 
 
 MRI_prompts = [
-    'In the LGE sequence of cardiac MRI, scar signals enhanced brightening on the myocardial , myocardium is more dark relative to the heart chamber blood signal',
     'In the bSSFP sequence of cardiac MRI, no disease signals are detected in the myocardial , myocardium is more dark relative to the heart chamber blood signal',
+    'In the LGE sequence of cardiac MRI, scar signals enhanced brightening on the myocardial , myocardium is more dark relative to the heart chamber blood signal',
     'In the T2w sequence of cardiac MRI, edema signals enhanced brightening on the myocardial , myocardium is more bright relative to the heart chamber blood signal',
 ]
 
