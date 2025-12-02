@@ -12,8 +12,8 @@ I-MMSeg is an intensity-guided multimodal CMR segmentation framework for myocard
 
 ### 1. Data Preparation
 
-Please download the following packages, 👉 Download link: [Google Drive](https://drive.google.com/drive/folders/1s8MCmZDA5kslwicDBFamX3hXiY72EkzX?usp=drive_link)
-
+Please download the following packages, 👉 Download link: [Google Drive](https://drive.google.com/drive/folders/1WHcpG8YlDlEdnlclbXKDZJANLX10iSq3?usp=drive_link)
+                                                                                
 - **Conda environment (I_MMSeg_env.tar.gz)**
 - **ViT pre-trained weights (R50-ViT-B_16.npz)**
 - **I-MMSeg model weights (epoch_299.pth)**
