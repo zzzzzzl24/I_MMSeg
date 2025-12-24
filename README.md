@@ -80,7 +80,7 @@ python test.py --dataset Myops --vit_name R50-ViT-B_16
 
 Comparative experiments on the MyoPS380 dataset
 
-![test_result](./docs/test_result.png)
+![test_result](./docs/test_result.png) 
 
 
 ## Reference
