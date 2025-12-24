@@ -78,7 +78,7 @@ To mitigate scale inconsistencies:
 Due to inter-modality differences influenced by respiration, cardiac motion, and acquisition parameters, significant spatial misalignment exists.
 
 - A 2D affine transformation (rotation, scaling, shearing, translation) was estimated slice-by-slice.
-- Myocardial segmentation masks served as structural priors for registration.
+- The myocardial ring segmentation masks were used as structural prior information for image registration. All myocardial ring masks were obtained using a pre-trained [SAMed](https://github.com/hitachinsk/SAMed), which was trained on 1,216 bSSFP cases with annotated myocardial rings.
 - The estimated transform was applied to both images and labels for high-accuracy alignment within the myocardial region.
 
 
@@ -123,7 +123,7 @@ and fully anonymized before data release to ensure patient privacy and complianc
 
 ---
 
-**(7) Data Usage Guidelines**
+<!-- **(7) Data Usage Guidelines**
 
 The **MyoPS380 dataset** is currently undergoing peer review as part of an accompanying publication.  
 Pending successful completion of the final compliance check, it is expected to be publicly released **before January 2026**.
@@ -134,4 +134,4 @@ Please ensure that a permanent or long-term responsible person (e.g., professor)
 After signing, send the scanned electronic version to:**donggenf@whu.edu.cn**, **Subject:** *MyoPS380 Dataset Release Agreement*.
 Please send the email from an **institutional email address** (e.g., xxx@xxx.edu.xx). Requests sent from free email providers (Outlook, QQ, Hotmail, etc.) will be politely declined.
 
-After verifying your information, we will send you the dataset download link. We usually reply within a week. If you do not receive a response—possibly due to delivery issues—please modify the email content or title and try resending. 
+After verifying your information, we will send you the dataset download link. We usually reply within a week. If you do not receive a response—possibly due to delivery issues—please modify the email content or title and try resending.  -->
