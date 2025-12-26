@@ -78,7 +78,7 @@ To mitigate scale inconsistencies:
 Due to inter-modality differences influenced by respiration, cardiac motion, and acquisition parameters, significant spatial misalignment exists.
 
 - A 2D affine transformation (rotation, scaling, shearing, translation) was estimated slice-by-slice.
-- The myocardial ring segmentation masks were used as structural prior information for image registration. All myocardial ring masks were obtained using a pre-trained [SAMed](https://github.com/hitachinsk/SAMed), which was trained on 1,216 bSSFP cases with annotated myocardial rings.
+- The myocardial ring segmentation masks were used as structural prior information for image registration. All myocardial ring masks were obtained using a pre-trained [SAMed](https://github.com/hitachinsk/SAMed).
 - The estimated transform was applied to both images and labels for high-accuracy alignment within the myocardial region.
 
 
